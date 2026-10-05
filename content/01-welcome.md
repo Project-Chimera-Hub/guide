@@ -19,3 +19,7 @@ Questions go to the [Discord](https://discord.com/invite/chmr).
 ## For developers
 
 Anyone can build a trainer and submit it. Start with [Developers](developers.html), then read [the harness](harness.html), [the record format](record-format.html) and [the criteria](criteria.html).
+
+## For leaders
+
+Co-admins and anyone who approves trainers: see [For co-admins and approvers](approvers.html).
