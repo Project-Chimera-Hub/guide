@@ -2,6 +2,33 @@
 
 Chimera Hub is a free, offline collection of cognitive trainers with one shared training record. This guide explains it to new users, and tells developers everything they need to add a trainer.
 
+## Why Chimera Hub
+
+Standalone trainers each keep their data their own way, if they keep it at all; the hub gives every trainer one record you can actually use.
+
+### For people who train
+
+| | A standalone trainer | Chimera Hub |
+| --- | --- | --- |
+| Your data | Its own storage format, often with no export | One record format for every trainer: when, how long, mode, difficulty, accuracy, reaction times, signal detection |
+| Using it | Copy numbers out by hand, if the app shows them | Download everything as one file or one CSV from **The record**, ready for a spreadsheet, R or Python |
+| Comparing | Impossible: every app has its own scales and units | Sessions from different trainers sit side by side in the same columns, with units named |
+| Training time | Counted per app, if at all | One daily total across all counted trainers, with an optional goal |
+| Keeping history | Lost when an app is abandoned or its storage cleared | The archive keeps every record it has read, even after a trainer is retired |
+| Finding trainers | Scattered sites of uneven quality | One place, sorted by what each trains; each one checked automatically and played by a leader before it appears |
+| Privacy | Varies: accounts, analytics, ads | Nothing leaves your device; no accounts, trackers or ads, checked on every submission |
+| Where it runs | Varies | Every trainer works offline, on phones and in the Android app |
+| Look and feel | Different in every app | One look and one set of controls across the hub |
+
+### For developers and researchers
+
+| | A standalone trainer | Chimera Hub |
+| --- | --- | --- |
+| Building | Write timing, staircase, logging, saving and pause handling yourself | The harness does all of it; you write the trial |
+| Data quality | Each app's data needs its own parser | One documented format with a validator; every trainer's data reads the same way |
+| Reaching people | Promote it alone | It joins the hub's users, the APK and their daily routine |
+| Research | Small, incompatible datasets | Optional anonymous sharing in one format, so sessions can be pooled across trainers and users |
+
 ## For first users
 
 Open [the hub](https://project-chimera-hub.github.io/ChimeraHub/), tap a folder, tap a trainer, and train; your minutes count toward one daily total.
