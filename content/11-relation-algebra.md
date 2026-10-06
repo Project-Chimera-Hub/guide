@@ -1,6 +1,6 @@
 # Relation Algebra notation
 
-Relation Algebra writes every premise, question and explanation in a short code by default. The code isn't meant to be guessed. Copy this page onto paper, or keep it open next to the trainer, until it reads like words. To have every premise written out instead, set **Text** to *Words* in the trainer's settings.
+Relation Algebra writes every premise, question and explanation in a short code by default, and speaks it in a spoken code with the eyes closed. The code isn't meant to be guessed. Copy this page onto paper, or keep it open next to the trainer, until it reads like words. To have every premise written out instead, set **Text** to *Words* in the trainer's settings.
 
 The trainer itself is described in its [README](https://github.com/Project-Chimera-Hub/ChimeraHub/blob/main/apps/relations/README.md).
 
@@ -83,6 +83,75 @@ belongs to is a symbol:
 The round summary reads `#3 · 75% · L4→5 · → nback/days · 41m`: round 3,
 75% right, level 4 to 5, next round structure n-back in days, 41 minutes
 left.
+
+
+
+## Eyes closed
+
+Every premise and question is spoken in the spoken code (below), and the
+whole screen under the bar becomes the answer pad:
+
+| Answers | Pad | Keys |
+| --- | --- | --- |
+| 1 (go on) | anywhere | Space |
+| 2 | left half, right half | F, J |
+| 3 | left, middle, right: yes, can't tell, no | F, K, J |
+| 4 | quarters: 1 2 above 3 4 | 1–4 |
+
+- The phone buzzes on every touch, and the screen is kept on while the
+  session runs.
+- Two soft rising notes mean the question comes next. The answer is timed
+  from the end of the question.
+- How far? says its choices after the question, smallest first, in pad order.
+- Each round opens with its number, task and material ("Round 3. n-back,
+  days, 2 back."). It closes with the score, the level and the minutes left,
+  then goes straight on.
+- Mistakes are explained in a few words: "Wrong. No. Red is Blue nine. Trap:
+  one step off." Set Explain to *Always* to hear every answer explained.
+  With Feedback sound off and Explain on *After mistakes*, a right answer is
+  silent.
+- **Speech rate** (0.8× to 1.75×) and **Silence between premises** (none to
+  1.5 s) set the pace.
+- Escape or Pause stops the voice. Resuming says the interrupted line again.
+
+The voice is the most natural one the device has: voices named Natural or
+Neural first, then Premium or Enhanced, then Google's, then the default.
+On Windows that means Edge's or Windows' natural voices. On Apple devices,
+download an Enhanced or Premium voice in the system's speech settings. On
+Android, the Google voices are used. Without any speech engine, the trial
+is shown on screen instead.
+
+## The spoken code
+
+The compact code said word for word, with words that are hard to mix up
+by ear. Every spoken line stands for exactly one written line; the tests read
+each one back.
+
+| Written | Spoken |
+| --- | --- |
+| `=` | is |
+| `R B G O V W` | Red, Blue, Green, Gold, Violet, White |
+| space digits | the digit as a word; a run of 2 is *double*, 3 *triple*, 4 *quad*, more "*n* times" |
+| `@4` | face four |
+| `^ v < >` | front, back, left, right (runs as above) |
+| `+n`, `−n` | up *n*, down *n* |
+| `q Q h` | right, left, half |
+| `m M d D` | mirror, flip, rise, fall |
+| `mod 12` | mod 12 |
+| marks `P S T U X Y Z A C E F J K L N` | Fox, Jar, Key, Lamp, Moon, Nest, Oak, Pond, Rope, Sun, Tent, Cup, Drum, Hat, Kite; a doubled letter adds *big* (`PP` is "big Fox") |
+| `R=B6?` | Is Red Blue six? |
+| `∃?` | Possible? |
+| `\|R−B\|₁?`, `\|R−B\|∞?` | Red to Blue, grid? / king? (numbers: "Red to Blue?") |
+| `≡2?`, `≅2?` | Same as 2 back? / Same as 2 back, any turn? |
+| `⊢1/2` | Hold, 1 of 2 |
+
+Examples:
+
+- `W1166=B666944` is "White double one double six is Blue triple six nine
+  double four".
+- `V=W@6vvv<<<` is "Violet is White face six triple back triple left".
+- `W+5=O+1−5` is "White up 5 is Gold up 1 down 5".
+- `R=BQdmm` is "Red is Blue left rise double mirror".
 
 ## Sessions
 
