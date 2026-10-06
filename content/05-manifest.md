@@ -28,3 +28,4 @@ Every trainer has a `chimera.json` at its repository's root; the check validates
 | `repository` | | `https://github.com/<owner>/<repo>`. |
 | `build` | | `null` for plain pages; otherwise `{ "command": "npm run build", "output": "dist" }`. The build must run after `npm ci` and output a relative base (`./`). |
 | `colour` | | A preferred icon colour; if it is taken, the hub picks a free one. |
+| `audioOnly` | | `true` for a trainer that needs no input and plays on with the screen locked: it stops on the hub's `chimera:leave` message instead of when the page is hidden (see [the criteria](criteria.html)). |

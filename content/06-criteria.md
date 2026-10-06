@@ -11,7 +11,7 @@ A trainer must meet every **Required** item. `tools/check-trainer.mjs` tests eve
 | No analytics, trackers or API keys | Required | Check |
 | Saves sessions in the Chimera record format | Required | Check |
 | Includes `test/sample-record.json` from a real session, and it validates | Required | Check |
-| Pauses, and stops counting time, when the page is hidden | Required | Check |
+| Pauses, and stops counting time, when the page is hidden (audio-only trainers: when the hub says the player left; see below) | Required | Check |
 | Stays in its frame: no `top`/`parent` access, no `target="_top"` | Required | Check |
 | Loads in Chromium offline, without errors, and does not scroll sideways at 360px | Required | Check (`--browser`) |
 | Has an OSI-approved license covering every asset | Required | Check |
@@ -30,3 +30,5 @@ A trainer must meet every **Required** item. `tools/check-trainer.mjs` tests eve
 | Honest: no claims beyond the evidence, no dark patterns, no personal data | Required | Reviewer |
 
 The check reads your code and never runs your build; `--browser` loads the page in headless Chromium, served from a sub-folder as the hub serves it. Exit status 0 means every required item it tests passed.
+
+**Audio-only trainers** are the one exception to pausing when the page is hidden. A trainer that needs no input and is meant to play on with the screen locked sets `"audioOnly": true` in `chimera.json`. It ignores visibility, and stops on the hub's `chimera:leave` message (sent when the player goes back to the menu) and on `pagehide`. It counts only the time its audio played. The check tests for the message handler instead. Listening Integration is the example.
